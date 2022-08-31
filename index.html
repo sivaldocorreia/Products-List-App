@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://bootswatch.com/5/journal/bootstrap.min.css" rel="stylesheet">
+    <title>Catalog of Products - Groceries</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4">
+            Catalog of Products 
+            <span class="material-symbols-outlined">
+                inventory
+            </span>
+        </h1>
+        <!-- alert here -->
+        <form id="product-form">
+            <div class="form-group">
+                <label for="name" class="mt-4">Name</label>
+                <input type="text" id="name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="mt-2">Description</label>
+                <textarea name='description'
+                rows="3"
+                cols="50"
+                id="description" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="category" class="mt-2">Choose one category</label>
+                <select name="category" id="category" class="form-control">
+                    <option value="produce">Produce</option>
+                    <option value="bread">Bread and Bakery</option>
+                    <option value="dairy">Dairy, eggs, chesse</option>
+                    <option value="grains">Grains, pasta and sides</option>
+                    <option value="vegs">Fruits, vegetables and herbs</option>
+                    <option value="beverages">Beverages</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity" class="mt-2">Quantity (1-100)</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" class="form-control">
+            </div>
+
+            <input type="submit" value="add product" class="btn btn-primary btn-block mt-4">
+        </form>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody id="product-list"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
